@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+  
+
+  <!-- Begin the simulator with the parameters from params.yaml -->
+  <node pkg="rrt" name="rrt_node" type="rrt_node" output="screen">
+    <rosparam command="load" file="$(find rrt)/rrt_params.yaml"/>
+  </node>
+
+  <!--launch RVIZ 
+    <node pkg="rviz" type = "rviz" name = "rviz" args="-d $(find rrt)/src/rrt.rviz" output="screen"/>
+
+  <arg name="racecar_xacro" default="$(find racecar_simulator)/racecar.xacro"/> -->
+
+  <!-- LAUNCHES RVIZ -->
+  <!--
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find rrt)/config/rrt*.rviz" />
+  -->
+</launch>
